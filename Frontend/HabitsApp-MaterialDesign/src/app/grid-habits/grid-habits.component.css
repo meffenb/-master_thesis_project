@@ -1,0 +1,49 @@
+mat-table {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+tbody td {
+  text-align: right;
+}
+
+.mat-elevation-z7 {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.example-button-row button {
+  align-content: center;
+  width: 100%;
+}
+
+.row {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.example-ripple-container {
+  cursor: pointer;
+  text-align: center;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.mat-fab {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  height: 100px;
+  width: 100px;
+}
+.mat-progress-spinner {
+  margin-left: 50%;
+  margin-right: 50%;
+}

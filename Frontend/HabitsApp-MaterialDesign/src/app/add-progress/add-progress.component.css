@@ -1,0 +1,8 @@
+.add-progress-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-progress-container > * {
+  width: 100%;
+}

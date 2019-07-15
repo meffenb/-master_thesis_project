@@ -1,0 +1,66 @@
+<div class="panel">
+  <form>
+    <div class="form-group form-inline">
+      <h4>Search: <input class="form-control ml-2" type="text" /></h4>
+    </div>
+  </form>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Habits</th>
+          <th scope="col">Description</th>
+          <th scope="col">Start date</th>
+          <th scope="col">Operations</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let element of dataSourceHabits"
+          (click)="selectRow(element)"
+          [class.active]="element.id"
+        >
+          <td class="lead">{{ element.name }}</td>
+          <td class="lead">{{ element.description }}</td>
+          <td class="lead">{{ element.startDate | date: "shortDate" }}</td>
+          <td>
+            <button type="button" class="btn" (click)="removeHabit(element)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="d-flex justify-content-between p-2">
+    <div class="pagination_orientation">
+      <ngb-pagination
+        [collectionSize]="collectionSizePagination"
+        [(page)]="pagePagination"
+        [pageSize]="pageSizePagination"
+      ></ngb-pagination>
+    </div>
+    <div class="selector_orientation">
+      <select
+        class="custom-select"
+        style="width: auto"
+        [(ngModel)]="pageSizePagination"
+      >
+        <option [ngValue]="5">5 items per page</option>
+        <option [ngValue]="10">10 items per page</option>
+        <option [ngValue]="15">15 items per page</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="panel">
+  <div class="add_button">
+    <button
+      type="button"
+      class="btn btn-success btn-block"
+      (click)="onAddNewHabit()"
+    >
+      <h3>NEW HABIT</h3>
+    </button>
+  </div>
+</div>

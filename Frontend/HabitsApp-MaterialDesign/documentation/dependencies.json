@@ -1,0 +1,1007 @@
+[
+  {
+    "name": "AppModule",
+    "file": "src/app/app.module.ts",
+    "providers": [
+      {
+        "name": "HabitsWorkoutService"
+      },
+      {
+        "name": "HabitsProgressService"
+      },
+      {
+        "name": "HabitsCategoryService"
+      }
+    ],
+    "declarations": [
+      {
+        "name": "AppComponent",
+        "file": "src/app/app.component.ts",
+        "selector": "app-root",
+        "providers": [],
+        "templateUrl": [
+          "app.component.html"
+        ],
+        "styleUrls": [
+          "app.component.css"
+        ],
+        "__raw": [
+          {
+            "pos": 121,
+            "end": 144,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 121,
+              "end": 132,
+              "flags": 0,
+              "escapedText": "selector"
+            },
+            "initializer": {
+              "pos": 133,
+              "end": 144,
+              "flags": 0,
+              "kind": 9,
+              "text": "app-root"
+            }
+          },
+          {
+            "pos": 145,
+            "end": 183,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 145,
+              "end": 159,
+              "flags": 0,
+              "escapedText": "templateUrl"
+            },
+            "initializer": {
+              "pos": 160,
+              "end": 183,
+              "flags": 0,
+              "kind": 9,
+              "text": "./app.component.html"
+            }
+          },
+          {
+            "pos": 184,
+            "end": 221,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 184,
+              "end": 196,
+              "flags": 0,
+              "escapedText": "styleUrls"
+            },
+            "initializer": {
+              "pos": 197,
+              "end": 221,
+              "flags": 0,
+              "kind": 182,
+              "elements": [
+                {
+                  "pos": 199,
+                  "end": 220,
+                  "flags": 0,
+                  "kind": 9,
+                  "text": "./app.component.css"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "HomeComponent"
+      },
+      {
+        "name": "GridHabitsComponent"
+      },
+      {
+        "name": "AddOrUpdateHabitsComponent",
+        "file": "app/add-or-update-habits/add-or-update-habits.component.ts",
+        "selector": "app-add-or-update-habits",
+        "providers": [],
+        "templateUrl": [
+          "add-or-update-habits.component.html"
+        ],
+        "styleUrls": [
+          "add-or-update-habits.component.css"
+        ],
+        "__raw": [
+          {
+            "pos": 94,
+            "end": 133,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 94,
+              "end": 105,
+              "flags": 0,
+              "escapedText": "selector"
+            },
+            "initializer": {
+              "pos": 106,
+              "end": 133,
+              "flags": 0,
+              "kind": 9,
+              "text": "app-add-or-update-habits"
+            }
+          },
+          {
+            "pos": 134,
+            "end": 189,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 134,
+              "end": 148,
+              "flags": 0,
+              "escapedText": "templateUrl"
+            },
+            "initializer": {
+              "pos": 149,
+              "end": 189,
+              "flags": 0,
+              "kind": 9,
+              "text": "./add-or-update-habits.component.html"
+            }
+          },
+          {
+            "pos": 190,
+            "end": 244,
+            "flags": 0,
+            "kind": 269,
+            "name": {
+              "pos": 190,
+              "end": 202,
+              "flags": 0,
+              "escapedText": "styleUrls"
+            },
+            "initializer": {
+              "pos": 203,
+              "end": 244,
+              "flags": 0,
+              "kind": 182,
+              "elements": [
+                {
+                  "pos": 205,
+                  "end": 243,
+                  "flags": 0,
+                  "kind": 9,
+                  "text": "./add-or-update-habits.component.css"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "HabitsProgressComponent"
+      },
+      {
+        "name": "GridProgressComponent"
+      },
+      {
+        "name": "GridCategoryComponent"
+      },
+      {
+        "name": "Dialogaddhabits"
+      },
+      {
+        "name": "Dialogaddprogresshabits"
+      }
+    ],
+    "imports": [
+      {
+        "name": "BrowserModule"
+      },
+      {
+        "name": "BrowserAnimationsModule"
+      },
+      {
+        "name": "MyMaterialModule"
+      },
+      {
+        "ns": "RouterModule",
+        "name": "RouterModule.forRoot(args)"
+      },
+      {
+        "name": "HttpClientModule"
+      },
+      {
+        "name": "FormsModule"
+      },
+      {
+        "name": "MatNativeDateModule"
+      },
+      {
+        "name": "ReactiveFormsModule"
+      },
+      {
+        "name": "MatGridListModule"
+      },
+      {
+        "name": "FlexLayoutModule"
+      },
+      {
+        "name": "ChartModule"
+      },
+      {
+        "name": "FullCalendarModule"
+      },
+      {
+        "name": "CalendarModule"
+      },
+      {
+        "name": "MatRippleModule"
+      },
+      {
+        "name": "MatCheckboxModule"
+      },
+      {
+        "name": "MatInputModule"
+      }
+    ],
+    "exports": [],
+    "bootstrap": [
+      {
+        "name": "AppComponent"
+      },
+      {
+        "name": "Dialogaddhabits"
+      },
+      {
+        "name": "Dialogaddprogresshabits"
+      }
+    ],
+    "__raw": [
+      {
+        "pos": 2195,
+        "end": 2444,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 2195,
+          "end": 2210,
+          "flags": 0,
+          "escapedText": "declarations"
+        },
+        "initializer": {
+          "pos": 2211,
+          "end": 2444,
+          "flags": 0,
+          "kind": 182,
+          "multiLine": true,
+          "elements": [
+            {
+              "pos": 2213,
+              "end": 2230,
+              "flags": 0,
+              "escapedText": "AppComponent"
+            },
+            {
+              "pos": 2231,
+              "end": 2249,
+              "flags": 0,
+              "escapedText": "HomeComponent"
+            },
+            {
+              "pos": 2250,
+              "end": 2274,
+              "flags": 0,
+              "escapedText": "GridHabitsComponent"
+            },
+            {
+              "pos": 2275,
+              "end": 2306,
+              "flags": 0,
+              "escapedText": "AddOrUpdateHabitsComponent"
+            },
+            {
+              "pos": 2307,
+              "end": 2335,
+              "flags": 0,
+              "escapedText": "HabitsProgressComponent"
+            },
+            {
+              "pos": 2336,
+              "end": 2362,
+              "flags": 0,
+              "escapedText": "GridProgressComponent"
+            },
+            {
+              "pos": 2363,
+              "end": 2389,
+              "flags": 0,
+              "escapedText": "GridCategoryComponent"
+            },
+            {
+              "pos": 2390,
+              "end": 2410,
+              "flags": 0,
+              "escapedText": "Dialogaddhabits"
+            },
+            {
+              "pos": 2411,
+              "end": 2439,
+              "flags": 0,
+              "escapedText": "Dialogaddprogresshabits"
+            }
+          ]
+        }
+      },
+      {
+        "pos": 2445,
+        "end": 2831,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 2445,
+          "end": 2455,
+          "flags": 0,
+          "escapedText": "imports"
+        },
+        "initializer": {
+          "pos": 2456,
+          "end": 2831,
+          "flags": 0,
+          "kind": 182,
+          "multiLine": true,
+          "elements": [
+            {
+              "pos": 2458,
+              "end": 2476,
+              "flags": 0,
+              "escapedText": "BrowserModule"
+            },
+            {
+              "pos": 2477,
+              "end": 2505,
+              "flags": 0,
+              "escapedText": "BrowserAnimationsModule"
+            },
+            {
+              "pos": 2506,
+              "end": 2527,
+              "flags": 0,
+              "escapedText": "MyMaterialModule"
+            },
+            {
+              "pos": 2528,
+              "end": 2564,
+              "flags": 0,
+              "kind": 186,
+              "expression": {
+                "pos": 2528,
+                "end": 2553,
+                "flags": 0,
+                "kind": 184,
+                "expression": {
+                  "pos": 2528,
+                  "end": 2545,
+                  "flags": 0,
+                  "escapedText": "RouterModule"
+                },
+                "name": {
+                  "pos": 2546,
+                  "end": 2553,
+                  "flags": 0,
+                  "escapedText": "forRoot"
+                }
+              },
+              "arguments": [
+                {
+                  "pos": 2554,
+                  "end": 2563,
+                  "flags": 0,
+                  "escapedText": "appRoutes"
+                }
+              ]
+            },
+            {
+              "pos": 2565,
+              "end": 2586,
+              "flags": 0,
+              "escapedText": "HttpClientModule"
+            },
+            {
+              "pos": 2587,
+              "end": 2603,
+              "flags": 0,
+              "escapedText": "FormsModule"
+            },
+            {
+              "pos": 2604,
+              "end": 2628,
+              "flags": 0,
+              "escapedText": "MatNativeDateModule"
+            },
+            {
+              "pos": 2629,
+              "end": 2653,
+              "flags": 0,
+              "escapedText": "ReactiveFormsModule"
+            },
+            {
+              "pos": 2654,
+              "end": 2676,
+              "flags": 0,
+              "escapedText": "MatGridListModule"
+            },
+            {
+              "pos": 2677,
+              "end": 2699,
+              "flags": 0,
+              "escapedText": "FlexLayoutModule"
+            },
+            {
+              "pos": 2700,
+              "end": 2716,
+              "flags": 0,
+              "escapedText": "ChartModule"
+            },
+            {
+              "pos": 2717,
+              "end": 2740,
+              "flags": 0,
+              "escapedText": "FullCalendarModule"
+            },
+            {
+              "pos": 2741,
+              "end": 2760,
+              "flags": 0,
+              "escapedText": "CalendarModule"
+            },
+            {
+              "pos": 2761,
+              "end": 2781,
+              "flags": 0,
+              "escapedText": "MatRippleModule"
+            },
+            {
+              "pos": 2782,
+              "end": 2805,
+              "flags": 0,
+              "escapedText": "MatCheckboxModule"
+            },
+            {
+              "pos": 2806,
+              "end": 2827,
+              "flags": 0,
+              "escapedText": "MatInputModule"
+            }
+          ]
+        }
+      },
+      {
+        "pos": 2832,
+        "end": 2930,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 2832,
+          "end": 2844,
+          "flags": 0,
+          "escapedText": "providers"
+        },
+        "initializer": {
+          "pos": 2845,
+          "end": 2930,
+          "flags": 0,
+          "kind": 182,
+          "multiLine": true,
+          "elements": [
+            {
+              "pos": 2847,
+              "end": 2872,
+              "flags": 0,
+              "escapedText": "HabitsWorkoutService"
+            },
+            {
+              "pos": 2873,
+              "end": 2899,
+              "flags": 0,
+              "escapedText": "HabitsProgressService"
+            },
+            {
+              "pos": 2900,
+              "end": 2926,
+              "flags": 0,
+              "escapedText": "HabitsCategoryService"
+            }
+          ]
+        }
+      },
+      {
+        "pos": 2931,
+        "end": 3009,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 2931,
+          "end": 2943,
+          "flags": 0,
+          "escapedText": "bootstrap"
+        },
+        "initializer": {
+          "pos": 2944,
+          "end": 3009,
+          "flags": 0,
+          "kind": 182,
+          "elements": [
+            {
+              "pos": 2946,
+              "end": 2958,
+              "flags": 0,
+              "escapedText": "AppComponent"
+            },
+            {
+              "pos": 2959,
+              "end": 2979,
+              "flags": 0,
+              "escapedText": "Dialogaddhabits"
+            },
+            {
+              "pos": 2980,
+              "end": 3008,
+              "flags": 0,
+              "escapedText": "Dialogaddprogresshabits"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "MyMaterialModule",
+    "file": "src/app/material.module.ts",
+    "providers": [],
+    "declarations": [],
+    "imports": [
+      {
+        "name": "MatTabsModule"
+      },
+      {
+        "name": "MatDividerModule"
+      },
+      {
+        "name": "MatSliderModule"
+      },
+      {
+        "name": "MatSelectModule"
+      },
+      {
+        "name": "MatRadioModule"
+      },
+      {
+        "name": "MatNativeDateModule"
+      },
+      {
+        "name": "MatDatepickerModule"
+      },
+      {
+        "name": "MatSnackBarModule"
+      },
+      {
+        "name": "MatIconModule"
+      },
+      {
+        "name": "MatDialogModule"
+      },
+      {
+        "name": "MatProgressSpinnerModule"
+      },
+      {
+        "name": "MatButtonModule"
+      },
+      {
+        "name": "MatSortModule"
+      },
+      {
+        "name": "MatTableModule"
+      },
+      {
+        "name": "MatTabsModule"
+      },
+      {
+        "name": "MatCheckboxModule"
+      },
+      {
+        "name": "MatToolbarModule"
+      },
+      {
+        "name": "MatCardModule"
+      },
+      {
+        "name": "MatFormFieldModule"
+      },
+      {
+        "name": "MatProgressSpinnerModule"
+      },
+      {
+        "name": "MatInputModule"
+      },
+      {
+        "name": "MatPaginatorModule"
+      }
+    ],
+    "exports": [
+      {
+        "name": "MatTabsModule"
+      },
+      {
+        "name": "MatDividerModule"
+      },
+      {
+        "name": "MatSliderModule"
+      },
+      {
+        "name": "MatSelectModule"
+      },
+      {
+        "name": "MatRadioModule"
+      },
+      {
+        "name": "MatNativeDateModule"
+      },
+      {
+        "name": "MatDatepickerModule"
+      },
+      {
+        "name": "MatSnackBarModule"
+      },
+      {
+        "name": "MatIconModule"
+      },
+      {
+        "name": "MatDialogModule"
+      },
+      {
+        "name": "MatProgressSpinnerModule"
+      },
+      {
+        "name": "MatButtonModule"
+      },
+      {
+        "name": "MatSortModule"
+      },
+      {
+        "name": "MatCheckboxModule"
+      },
+      {
+        "name": "MatToolbarModule"
+      },
+      {
+        "name": "MatCardModule"
+      },
+      {
+        "name": "MatTableModule"
+      },
+      {
+        "name": "MatTabsModule"
+      },
+      {
+        "name": "MatFormFieldModule"
+      },
+      {
+        "name": "MatProgressSpinnerModule"
+      },
+      {
+        "name": "MatInputModule"
+      },
+      {
+        "name": "MatPaginatorModule"
+      }
+    ],
+    "bootstrap": [],
+    "__raw": [
+      {
+        "pos": 693,
+        "end": 1089,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 693,
+          "end": 702,
+          "flags": 0,
+          "escapedText": "imports"
+        },
+        "initializer": {
+          "pos": 703,
+          "end": 1089,
+          "flags": 0,
+          "kind": 182,
+          "elements": [
+            {
+              "pos": 705,
+              "end": 718,
+              "flags": 0,
+              "escapedText": "MatTabsModule"
+            },
+            {
+              "pos": 719,
+              "end": 735,
+              "flags": 0,
+              "escapedText": "MatDividerModule"
+            },
+            {
+              "pos": 736,
+              "end": 751,
+              "flags": 0,
+              "escapedText": "MatSliderModule"
+            },
+            {
+              "pos": 752,
+              "end": 767,
+              "flags": 0,
+              "escapedText": "MatSelectModule"
+            },
+            {
+              "pos": 768,
+              "end": 782,
+              "flags": 0,
+              "escapedText": "MatRadioModule"
+            },
+            {
+              "pos": 783,
+              "end": 802,
+              "flags": 0,
+              "escapedText": "MatNativeDateModule"
+            },
+            {
+              "pos": 803,
+              "end": 822,
+              "flags": 0,
+              "escapedText": "MatDatepickerModule"
+            },
+            {
+              "pos": 823,
+              "end": 840,
+              "flags": 0,
+              "escapedText": "MatSnackBarModule"
+            },
+            {
+              "pos": 841,
+              "end": 854,
+              "flags": 0,
+              "escapedText": "MatIconModule"
+            },
+            {
+              "pos": 855,
+              "end": 870,
+              "flags": 0,
+              "escapedText": "MatDialogModule"
+            },
+            {
+              "pos": 871,
+              "end": 895,
+              "flags": 0,
+              "escapedText": "MatProgressSpinnerModule"
+            },
+            {
+              "pos": 896,
+              "end": 911,
+              "flags": 0,
+              "escapedText": "MatButtonModule"
+            },
+            {
+              "pos": 912,
+              "end": 925,
+              "flags": 0,
+              "escapedText": "MatSortModule"
+            },
+            {
+              "pos": 926,
+              "end": 940,
+              "flags": 0,
+              "escapedText": "MatTableModule"
+            },
+            {
+              "pos": 941,
+              "end": 954,
+              "flags": 0,
+              "escapedText": "MatTabsModule"
+            },
+            {
+              "pos": 955,
+              "end": 973,
+              "flags": 0,
+              "escapedText": "MatCheckboxModule"
+            },
+            {
+              "pos": 974,
+              "end": 991,
+              "flags": 0,
+              "escapedText": "MatToolbarModule"
+            },
+            {
+              "pos": 992,
+              "end": 1006,
+              "flags": 0,
+              "escapedText": "MatCardModule"
+            },
+            {
+              "pos": 1007,
+              "end": 1026,
+              "flags": 0,
+              "escapedText": "MatFormFieldModule"
+            },
+            {
+              "pos": 1027,
+              "end": 1052,
+              "flags": 0,
+              "escapedText": "MatProgressSpinnerModule"
+            },
+            {
+              "pos": 1053,
+              "end": 1068,
+              "flags": 0,
+              "escapedText": "MatInputModule"
+            },
+            {
+              "pos": 1069,
+              "end": 1088,
+              "flags": 0,
+              "escapedText": "MatPaginatorModule"
+            }
+          ]
+        }
+      },
+      {
+        "pos": 1090,
+        "end": 1486,
+        "flags": 0,
+        "kind": 269,
+        "name": {
+          "pos": 1090,
+          "end": 1099,
+          "flags": 0,
+          "escapedText": "exports"
+        },
+        "initializer": {
+          "pos": 1100,
+          "end": 1486,
+          "flags": 0,
+          "kind": 182,
+          "elements": [
+            {
+              "pos": 1102,
+              "end": 1115,
+              "flags": 0,
+              "escapedText": "MatTabsModule"
+            },
+            {
+              "pos": 1116,
+              "end": 1132,
+              "flags": 0,
+              "escapedText": "MatDividerModule"
+            },
+            {
+              "pos": 1133,
+              "end": 1148,
+              "flags": 0,
+              "escapedText": "MatSliderModule"
+            },
+            {
+              "pos": 1149,
+              "end": 1164,
+              "flags": 0,
+              "escapedText": "MatSelectModule"
+            },
+            {
+              "pos": 1165,
+              "end": 1179,
+              "flags": 0,
+              "escapedText": "MatRadioModule"
+            },
+            {
+              "pos": 1180,
+              "end": 1199,
+              "flags": 0,
+              "escapedText": "MatNativeDateModule"
+            },
+            {
+              "pos": 1200,
+              "end": 1219,
+              "flags": 0,
+              "escapedText": "MatDatepickerModule"
+            },
+            {
+              "pos": 1220,
+              "end": 1237,
+              "flags": 0,
+              "escapedText": "MatSnackBarModule"
+            },
+            {
+              "pos": 1238,
+              "end": 1251,
+              "flags": 0,
+              "escapedText": "MatIconModule"
+            },
+            {
+              "pos": 1252,
+              "end": 1267,
+              "flags": 0,
+              "escapedText": "MatDialogModule"
+            },
+            {
+              "pos": 1268,
+              "end": 1292,
+              "flags": 0,
+              "escapedText": "MatProgressSpinnerModule"
+            },
+            {
+              "pos": 1293,
+              "end": 1308,
+              "flags": 0,
+              "escapedText": "MatButtonModule"
+            },
+            {
+              "pos": 1309,
+              "end": 1322,
+              "flags": 0,
+              "escapedText": "MatSortModule"
+            },
+            {
+              "pos": 1323,
+              "end": 1341,
+              "flags": 0,
+              "escapedText": "MatCheckboxModule"
+            },
+            {
+              "pos": 1342,
+              "end": 1359,
+              "flags": 0,
+              "escapedText": "MatToolbarModule"
+            },
+            {
+              "pos": 1360,
+              "end": 1374,
+              "flags": 0,
+              "escapedText": "MatCardModule"
+            },
+            {
+              "pos": 1375,
+              "end": 1389,
+              "flags": 0,
+              "escapedText": "MatTableModule"
+            },
+            {
+              "pos": 1390,
+              "end": 1403,
+              "flags": 0,
+              "escapedText": "MatTabsModule"
+            },
+            {
+              "pos": 1404,
+              "end": 1423,
+              "flags": 0,
+              "escapedText": "MatFormFieldModule"
+            },
+            {
+              "pos": 1424,
+              "end": 1449,
+              "flags": 0,
+              "escapedText": "MatProgressSpinnerModule"
+            },
+            {
+              "pos": 1450,
+              "end": 1465,
+              "flags": 0,
+              "escapedText": "MatInputModule"
+            },
+            {
+              "pos": 1466,
+              "end": 1485,
+              "flags": 0,
+              "escapedText": "MatPaginatorModule"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 0px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  height: 100%;
+}
+
+.row_1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 400px;
+  margin-left: 0px;
+}
+
+@media screen and (min-width: 800px) {
+  .column {
+    flex: 1;
+  }
+}
+ngb-pagination ::ng-deep ul > li.active > a {
+  background-color: #4fc1e9 !important;
+  border-color: #4fc1e9 !important;
+}
+.tab-pane {
+  width: 100%;
+}
+.table td {
+  text-align: left;
+  font-size: 150%;
+}
+
+.table th {
+  font-size: 150%;
+}
+.selector_orientation {
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
+  font-size: 150%;
+}
+.pagination_orientation {
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+.panel-title {
+  font-size: 200%;
+}
+.panel p {
+  font-size: 150%;
+}
+.fc
+  .fc-toolbar
+  .fc-button
+  .fc-event
+  .fc-prev-button
+  .fc-button
+  .fc-button-group
+  .fc-today-button
+  .fc-button {
+  background-color: #4fc1e9;
+  border-color: #4fc1e9;
+}
+.panel-heading {
+  background-color: #3bafda;
+}
+.panel_1 {
+  background-color: #4fc1e9;
+}

@@ -1,0 +1,49 @@
+.panel {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.panel h4 {
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+.table td {
+  text-align: left;
+  font-size: 150%;
+}
+
+.table th {
+  font-size: 150%;
+}
+
+.add_button {
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+  font-size: 200%;
+}
+.add_button h3 {
+  text-align: center;
+}
+
+.selector_orientation {
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
+  font-size: 150%;
+}
+.pagination_orientation {
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+
+ngb-pagination ::ng-deep ul > li.active > a {
+  background-color: #4fc1e9 !important;
+  border-color: #4fc1e9 !important;
+}
+.add_button button {
+  background-color: #3bafda;
+  font-weight: bold;
+}

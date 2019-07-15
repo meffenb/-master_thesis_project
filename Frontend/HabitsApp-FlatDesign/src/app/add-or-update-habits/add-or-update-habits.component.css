@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+}
+.container label {
+  font-size: 150%;
+  margin: 8px;
+  margin-top: 16px;
+}
+.container input {
+  height: 40px;
+  font-size: 150%;
+  margin: 8px;
+  width: 97%;
+}
+.container select {
+  height: 40px;
+  font-size: 150%;
+  margin: 8px;
+  width: 97%;
+}
+.container p-calendar {
+  max-height: 150%;
+  width: 125%;
+  margin: 8px;
+}
+.container button {
+  font-size: 150%;
+  margin-top: 30px;
+  background-color: #4a89dc;
+  width: 97%;
+  margin-left: 8px;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 250%;
+}
+.container form {
+  margin-bottom: 0px;
+}

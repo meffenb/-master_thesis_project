@@ -1,0 +1,90 @@
+.row {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 0px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  height: 400px;
+}
+
+@media screen and (min-width: 800px) {
+  .column {
+    flex: 1;
+  }
+}
+
+.panel a {
+  width: 245px;
+  text-align: center;
+  font-size: 150%;
+}
+.tab-pane {
+  width: 100%;
+}
+.table td {
+  text-align: left;
+  font-size: 150%;
+}
+
+.table th {
+  font-size: 150%;
+}
+ngb-pagination ::ng-deep ul > li.active > a {
+  background-color: #4fc1e9 !important;
+  border-color: #4fc1e9 !important;
+}
+.selector_orientation {
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
+  font-size: 150%;
+}
+.pagination_orientation {
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+
+.add_button {
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+  font-size: 200%;
+}
+.add_button h3 {
+  text-align: center;
+}
+
+.panel {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.checkbox label {
+  width: 140%;
+  height: 140%;
+  margin: 8px;
+}
+.check_chart {
+  margin-left: 16px;
+  font-size: 150%;
+}
+.column-chceckbox {
+  height: 100px;
+}
+.add_button button {
+  background-color: #3bafda;
+  font-weight: bold;
+}
+.toggle input[type="checkbox"]:checked + .handle:before,
+.toggle input[type="radio"]:checked + .handle:before {
+  background-color: #3bafda;
+}

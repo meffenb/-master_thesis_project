@@ -1,0 +1,29 @@
+.mat-table {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+tbody td {
+  text-align: right;
+}
+
+.mat-elevation-z7 {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.row {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.mat-spinner {
+  margin-left: 50%;
+  margin-right: 50%;
+}

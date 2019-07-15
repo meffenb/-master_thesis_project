@@ -1,0 +1,145 @@
+<div class="some-page-wrapper">
+  <div class="row">
+    <div class="column">
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading panel_1">
+            <h3 class="panel-title">Habits:</h3>
+          </div>
+          <div class="panel-body">
+            <h4>{{ dataSourceHabit?.name }}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Category:</h3>
+          </div>
+          <div class="panel-body">
+            <p *ngIf="dataSourceHabit.habitsCategoriesId == 1">Sport</p>
+            <p *ngIf="dataSourceHabit.habitsCategoriesId == 2">Health</p>
+            <p *ngIf="dataSourceHabit.habitsCategoriesId == 3">Education</p>
+            <p *ngIf="dataSourceHabit.habitsCategoriesId == 4">Work</p>
+            <p *ngIf="dataSourceHabit.habitsCategoriesId == 5">Home</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Start data:</h3>
+          </div>
+          <div class="panel-body">
+            <p>{{ dataSourceHabit?.startDate | date: "shortDate" }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Description:</h3>
+          </div>
+          <div class="panel-body">
+            <p>{{ dataSourceHabit?.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row_1">
+    <div class="column">
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Calendar:</h3>
+          </div>
+          <div class="panel-body">
+            <full-calendar
+              defaultView="dayGridMonth"
+              [plugins]="calendarPlugins"
+              [events]="events"
+            ></full-calendar>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Progress:</h3>
+          </div>
+          <div class="panel-body">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Operations</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    *ngFor="let element of dataSourceProgress"
+                    [class.active]="element.id"
+                  >
+                    <td class="lead">{{ element.id }}</td>
+                    <td class="lead">{{ element.data | date: "shortDate" }}</td>
+                    <td class="lead">{{ element.status }}</td>
+                    <td>
+                      <button
+                        type="button"
+                        class="btn"
+                        (click)="deleteProgressRecord(element)"
+                      >
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="d-flex justify-content-between p-2">
+              <div class="pagination_orientation">
+                <ngb-pagination
+                  [collectionSize]="collectionSizePagination"
+                  [(page)]="pagePagination"
+                  [pageSize]="pageSizePagination"
+                ></ngb-pagination>
+              </div>
+              <div class="selector_orientation">
+                <select
+                  class="custom-select"
+                  style="width: auto"
+                  [(ngModel)]="pageSizePagination"
+                >
+                  <option [ngValue]="5">5 items per page</option>
+                  <option [ngValue]="10">10 items per page</option>
+                  <option [ngValue]="15">15 items per page</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

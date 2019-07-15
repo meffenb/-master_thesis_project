@@ -1,0 +1,52 @@
+<div class="add-container">
+  <mat-form-field>
+    <mat-label>Name:</mat-label>
+    <input
+      matInput
+      required
+      placeholder="e.g run"
+      [(ngModel)]="dataHabits.name"
+      class="form-control1"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description:</mat-label>
+    <input
+      matInput
+      placeholder="e.g to increase fitness"
+      [(ngModel)]="dataHabits.description"
+      class="form-control1"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Category:</mat-label>
+    <mat-select
+      required
+      class="categoryid"
+      [(ngModel)]="dataHabits.habitsCategoriesId"
+    >
+      <mat-option *ngFor="let option of options" [value]="option.id">{{
+        option.name
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Choose start date:</mat-label>
+    <input
+      required
+      matInput
+      [matDatepicker]="picker"
+      [(ngModel)]="dataHabits.startDate"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="addHabitsRecord($event)"
+    class="example-button-row"
+  >
+    Add
+  </button>
+</div>

@@ -1,0 +1,8 @@
+<div mat-dialog-content>
+  <app-add-habits (habitsCreated)="createHabits($event)"></app-add-habits>
+</div>
+<div mat-dialog-actions class="example-button-row">
+  <button mat-stroked-button color="accent" (click)="onCancelClick()">
+    Cancel
+  </button>
+</div>

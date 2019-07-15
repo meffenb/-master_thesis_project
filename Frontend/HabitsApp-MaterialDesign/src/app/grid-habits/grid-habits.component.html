@@ -1,0 +1,82 @@
+<div class="search-div">
+  <div class="row">
+    <div class="col-xs-6 col-md-4">
+      <mat-form-field>
+        <input
+          matInput
+          (keyup)="applyFilter($event.target.value)"
+          placeholder="Filter"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+
+<div
+  class="example-ripple-container mat-elevation-z7"
+  matRipple
+  [matRippleCentered]="true"
+>
+  <mat-spinner
+    color="accent"
+    [style.display]="loading ? 'block' : 'none'"
+  ></mat-spinner>
+  <mat-table
+    [style.display]="loading === false ? 'block' : 'none'"
+    #table
+    [dataSource]="dataSourceHabits"
+  >
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> Num. </mat-header-cell>
+      <mat-cell *matCellDef="let element; let position = index"
+        >{{ position }}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.id }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Habits </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.description }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="habitsCategoriesId">
+      <mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element.habitsCategoriesId }}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="habitsdate">
+      <mat-header-cell *matHeaderCellDef> Start date </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ element.startDate | date: "shortDate" }}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="operations">
+      <mat-header-cell *matHeaderCellDef> Operations </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <button mat-button color="accent" (click)="removeHabit(element)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumnsHabits"></mat-header-row>
+    <mat-row
+      *matRowDef="let row; columns: displayedColumnsHabits"
+      (click)="selectRow(row)"
+    ></mat-row>
+  </mat-table>
+  <mat-paginator
+    #paginator
+    [style.display]="loading === false ? 'block' : 'none'"
+    [pageSize]="5"
+    [pageSizeOptions]="[5, 10, 25]"
+  ></mat-paginator>
+</div>
+<button mat-fab color="accent" (click)="onAddNewHabit()">
+  <mat-icon>add</mat-icon>
+</button>

@@ -1,0 +1,96 @@
+table {
+  margin-top: 1.5em;
+}
+
+tbody td {
+  text-align: right;
+}
+
+.mat-elevation-z7 {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.example-button-row button {
+  align-content: center;
+  width: 100%;
+}
+
+.row {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.mat-card {
+  margin: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 0px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .column {
+    flex: 1;
+  }
+}
+
+.mat-table {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+tbody td {
+  text-align: right;
+}
+
+.mat-elevation-z7 {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+.example-margin {
+  margin: 0 10px;
+}
+.mat-fab {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  height: 100px;
+  width: 100px;
+}
+.mat-spinner {
+  margin-left: 50%;
+  margin-right: 50%;
+}

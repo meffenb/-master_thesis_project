@@ -1,0 +1,10 @@
+<div mat-dialog-content>
+  <app-add-progress
+    (habitsProgressCreated)="createProgress($event)"
+  ></app-add-progress>
+</div>
+<div mat-dialog-actions class="example-button-row">
+  <button mat-stroked-button color="accent" (click)="cancelClick()">
+    Cancel
+  </button>
+</div>

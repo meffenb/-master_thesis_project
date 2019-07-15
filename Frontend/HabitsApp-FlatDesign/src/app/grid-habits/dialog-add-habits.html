@@ -1,0 +1,11 @@
+<app-add-or-update-habits
+  (habitsCreated)="createHabits($event)"
+></app-add-or-update-habits>
+<button
+  type="submit"
+  class="btn btn-default btn-block"
+  style="font-size: 125%; width: 86%;margin-left: 39px;"
+  (click)="cancelClick()"
+>
+  Cancel
+</button>

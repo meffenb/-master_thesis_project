@@ -1,0 +1,52 @@
+<div class="add-progress-container">
+  <mat-label>ADD PROGRESS</mat-label>
+  <mat-form-field>
+    <mat-label>Date:</mat-label>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      [(ngModel)]="habitsProgressInfo.data"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Status:</mat-label>
+    <select
+      matNativeControl
+      required
+      class="status"
+      [(ngModel)]="habitsProgressInfo.status"
+    >
+      <option value="completed">Completed</option>
+      <option value="missed">Missed</option>
+    </select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Habits:</mat-label>
+    <mat-select
+      required
+      class="habitsid"
+      [(ngModel)]="habitsProgressInfo.habitsId"
+    >
+      <mat-option *ngFor="let option of dataHabits" [value]="dataHabits.id">{{
+        dataHabits.name
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description:</mat-label>
+    <input
+      matInput
+      placeholder="e.g to increase fitness"
+      class="form-control"
+    />
+  </mat-form-field>
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="addHabitsProgressRecord()"
+  >
+    Save
+  </button>
+</div>

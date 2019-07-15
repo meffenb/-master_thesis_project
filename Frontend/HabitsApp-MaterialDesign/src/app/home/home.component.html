@@ -1,0 +1,163 @@
+<div class="some-page-wrapper">
+  <div class="row">
+    <div class="column">
+      <mat-card
+        class="Name example-ripple-container"
+        matRipple
+        [matRippleCentered]="true"
+      >
+        <mat-card-content>
+          <h1 class="mat-display-1">{{ dataSourceHabit?.name }}</h1>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <mat-card
+        class="Category example-ripple-container"
+        matRipple
+        [matRippleCentered]="true"
+      >
+        <mat-card-content>
+          <h1 class="mat-h1">Category:</h1>
+          <h1 class="mat-h1" *ngIf="dataSourceHabit.habitsCategoriesId == 1">
+            Sport
+          </h1>
+          <h1 class="mat-h1" *ngIf="dataSourceHabit.habitsCategoriesId == 2">
+            Health
+          </h1>
+          <h1 class="mat-h1" *ngIf="dataSourceHabit.habitsCategoriesId == 3">
+            Education
+          </h1>
+          <h1 class="mat-h1" *ngIf="dataSourceHabit.habitsCategoriesId == 4">
+            Work
+          </h1>
+          <h1 class="mat-h1" *ngIf="dataSourceHabit.habitsCategoriesId == 5">
+            Home
+          </h1>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="column">
+      <mat-card
+        class="Data example-ripple-container"
+        matRipple
+        [matRippleCentered]="true"
+      >
+        <mat-card-content>
+          <h1 class="mat-h1">Start date:</h1>
+          <h1 class="mat-h1">
+            {{ dataSourceHabit?.startDate | date: "shortDate" }}
+          </h1>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <mat-card
+        class="Description example-ripple-container"
+        matRipple
+        [matRippleCentered]="true"
+      >
+        <mat-card-content>
+          <h1 class="mat-h1">Description:</h1>
+          <h1 class="mat-h1">{{ dataSourceHabit?.description }}</h1>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row_1">
+    <div class="column">
+      <mat-card class="Calendar example-ripple-container">
+        <mat-card-header>
+          <mat-card-title>Calendar:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <full-calendar
+            defaultView="dayGridMonth"
+            [plugins]="calendarPlugins"
+            [events]="events"
+          ></full-calendar>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="column">
+      <mat-card class="Progres example-ripple-container">
+        <mat-card-header>
+          <mat-card-title>Progress:</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="mat-elevation-z7">
+            <mat-spinner
+              [style.display]="loading ? 'block' : 'none'"
+            ></mat-spinner>
+            <mat-table
+              [style.display]="loading === false ? 'block' : 'none'"
+              #table
+              [dataSource]="dataSourceProgress"
+            >
+              <ng-container matColumnDef="id">
+                <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  {{ element.id }}
+                </mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="data">
+                <mat-header-cell *matHeaderCellDef> Data </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  {{ element.data | date: "shortDate" }}
+                </mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="status">
+                <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  {{ element.status }}
+                </mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="habitsID">
+                <mat-header-cell *matHeaderCellDef> HabitsID </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  {{ element.habitsId }}
+                </mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="operations">
+                <mat-header-cell *matHeaderCellDef>
+                  Operations
+                </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  <button
+                    mat-button
+                    color="primary"
+                    (click)="removeProgress(element)"
+                  >
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </mat-cell>
+              </ng-container>
+
+              <mat-header-row
+                *matHeaderRowDef="displayedColumnsProgress"
+              ></mat-header-row>
+              <mat-row
+                *matRowDef="let row; columns: displayedColumnsProgress"
+              ></mat-row>
+            </mat-table>
+            <mat-paginator
+              #paginator
+              [style.display]="loading === false ? 'block' : 'none'"
+              [pageSize]="5"
+              [pageSizeOptions]="[5, 10, 25, 50, 100]"
+            ></mat-paginator>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

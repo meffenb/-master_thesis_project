@@ -1,0 +1,166 @@
+<div class="col-md-12">
+  <div class="panel">
+    <ul id="myTab1" class="nav nav-tabs ">
+      <li class="active">
+        <a href="#progress" data-toggle="tab">LIST OF PROGRESS</a>
+      </li>
+      <li class=""><a href="#charts" data-toggle="tab">CHARTS</a></li>
+    </ul>
+
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane active in" id="progress">
+        <form>
+          <div class="form-group form-inline">
+            <h4>Search: <input class="form-control ml-2" type="text" /></h4>
+          </div>
+        </form>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Data</th>
+                <th scope="col">Status</th>
+                <th scope="col">HabitsID</th>
+                <th scope="col">Operations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="let element of dataSourceProgress"
+                [class.active]="element.id"
+              >
+                <td class="lead">{{ element.id }}</td>
+                <td class="lead">{{ element.data | date: "shortDate" }}</td>
+                <td class="lead">{{ element.status }}</td>
+                <td class="lead">{{ element.habitsId }}</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn"
+                    (click)="removeProgress(element)"
+                  >
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="d-flex justify-content-between p-2">
+          <div class="pagination_orientation">
+            <ngb-pagination
+              [collectionSize]="collectionSizePagination"
+              [(page)]="pagePagination"
+              [pageSize]="pageSizePagination"
+            ></ngb-pagination>
+          </div>
+          <div class="selector_orientation">
+            <select
+              class="custom-select"
+              style="width: auto"
+              [(ngModel)]="pageSizePagination"
+            >
+              <option [ngValue]="5">5 items per page</option>
+              <option [ngValue]="10">10 items per page</option>
+              <option [ngValue]="15">15 items per page</option>
+            </select>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="add_button">
+            <button
+              type="button"
+              class="btn btn-success btn-block"
+              (click)="onAddNewProgress()"
+            >
+              <h3>NEW PROGRESS</h3>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="charts">
+        <div class="some-page-wrapper">
+          <div class="row">
+            <div class="column column-chceckbox">
+              <div class="panel panel-default ">
+                <label class="check_chart">Type of chart:</label>
+                <div class="row">
+                  <div class="col-md">
+                    <label class="toggle">
+                      <input
+                        type="checkbox"
+                        checked="true"
+                        [(ngModel)]="displayNoSignUp1"
+                      />
+                      <span class="handle"></span>
+                    </label>
+                    <label class="check_chart">Doughnut</label>
+                  </div>
+                  <div class="col-md">
+                    <label class="toggle">
+                      <input
+                        type="checkbox"
+                        checked="true"
+                        [(ngModel)]="displayNoSignUp2"
+                      />
+                      <span class="handle"></span>
+                    </label>
+                    <label class="check_chart">Bar</label>
+                  </div>
+                  <div class="col-md">
+                    <label class="toggle">
+                      <input
+                        type="checkbox"
+                        checked="true"
+                        [(ngModel)]="displayNoSignUp3"
+                      />
+                      <span class="handle"></span>
+                    </label>
+                    <label class="check_chart">Line</label>
+                  </div>
+                  <div class="col-md">
+                    <label class="toggle">
+                      <input
+                        type="checkbox"
+                        checked="true"
+                        [(ngModel)]="displayNoSignUp4"
+                      />
+                      <span class="handle"></span>
+                    </label>
+                    <label class="check_chart">Pie</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column" *ngIf="displayNoSignUp1">
+              <div class="panel panel-default">
+                <p-chart type="doughnut" [data]="dataCircleDiagram"></p-chart>
+              </div>
+            </div>
+            <div class="column" *ngIf="displayNoSignUp2">
+              <div class="panel panel-default">
+                <p-chart type="bar" [data]="dataBarDiagram"></p-chart>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column" *ngIf="displayNoSignUp3">
+              <div class="panel panel-default">
+                <p-chart type="line" [data]="dataBarDiagram"></p-chart>
+              </div>
+            </div>
+            <div class="column" *ngIf="displayNoSignUp4">
+              <div class="panel panel-default">
+                <p-chart type="pie" [data]="dataCircleDiagram"></p-chart>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

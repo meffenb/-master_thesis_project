@@ -1,0 +1,182 @@
+<mat-tab-group mat-stretch-tabs class="mat-tab-category">
+  <mat-tab label="LIST OF PROGRESS">
+    <div class="search-div">
+      <div class="row">
+        <div class="col-xs-6 col-md-4">
+          <mat-form-field>
+            <input
+              matInput
+              (keyup)="applyFilter($event.target.value)"
+              placeholder="Filter"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="mat-elevation-z7 example-ripple-container"
+      matRipple
+      [matRippleCentered]="true"
+    >
+      <mat-spinner
+        color="accent"
+        [style.display]="loading ? 'block' : 'none'"
+      ></mat-spinner>
+      <mat-table
+        [style.display]="loading === false ? 'block' : 'none'"
+        #table
+        [dataSource]="dataSourceProgress"
+      >
+        <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.id }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="data">
+          <mat-header-cell *matHeaderCellDef> Data </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{ element.data | date: "shortDate" }}
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="status">
+          <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.status }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="habitsID">
+          <mat-header-cell *matHeaderCellDef> HabitsID </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            {{ element.habitsId }}
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="operations">
+          <mat-header-cell *matHeaderCellDef> Operations </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <button
+              mat-button
+              color="accent"
+              (click)="removeProgress(element)"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumnsProgress"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumnsProgress"></mat-row>
+      </mat-table>
+      <mat-paginator
+        #paginator
+        [style.display]="loading === false ? 'block' : 'none'"
+        [pageSize]="5"
+        [pageSizeOptions]="[5, 10, 25, 50, 100]"
+      ></mat-paginator>
+    </div>
+    <button
+      mat-fab
+      color="accent"
+      mat-raised-button
+      (click)="onAddNewProgress()"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-tab>
+
+  <mat-tab label="CHARTS">
+    <div class="some-page-wrapper">
+      <div class="row">
+        <div class="column">
+          <mat-card
+            class="Name example-ripple-container"
+            matRipple
+            [matRippleCentered]="true"
+          >
+            <mat-card-header>
+              <mat-card-title>
+                <p>Type of chart:</p>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <section class="example-section">
+                <mat-checkbox
+                  checked="true"
+                  class="example-margin"
+                  [(ngModel)]="displayNoSignUp1"
+                  >Doughnut</mat-checkbox
+                >
+                <mat-checkbox
+                  class="example-margin"
+                  checked="true"
+                  [(ngModel)]="displayNoSignUp2"
+                  >Bar</mat-checkbox
+                >
+                <mat-checkbox
+                  class="example-margin"
+                  checked="true"
+                  [(ngModel)]="displayNoSignUp3"
+                  >Line</mat-checkbox
+                >
+                <mat-checkbox
+                  class="example-margin"
+                  checked="true"
+                  [(ngModel)]="displayNoSignUp4"
+                  >Pie</mat-checkbox
+                >
+              </section>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column" *ngIf="displayNoSignUp1">
+          <mat-card
+            class="Category example-ripple-container"
+            matRipple
+            [matRippleCentered]="true"
+          >
+            <mat-card-content>
+              <p-chart type="doughnut" [data]="dataCircleDiagram"></p-chart>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <div class="column" *ngIf="displayNoSignUp2">
+          <mat-card
+            class="Category example-ripple-container"
+            matRipple
+            [matRippleCentered]="true"
+          >
+            <mat-card-content>
+              <p-chart type="bar" [data]="dataBarDiagram"></p-chart>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column" *ngIf="displayNoSignUp3">
+          <mat-card
+            class="Category example-ripple-container"
+            matRipple
+            [matRippleCentered]="true"
+          >
+            <mat-card-content>
+              <p-chart type="line" [data]="dataBarDiagram"></p-chart>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="column" *ngIf="displayNoSignUp4">
+          <mat-card
+            class="Category example-ripple-container"
+            matRipple
+            [matRippleCentered]="true"
+          >
+            <mat-card-content>
+              <p-chart type="pie" [data]="dataCircleDiagram"></p-chart>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

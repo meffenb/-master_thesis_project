@@ -1,0 +1,65 @@
+<div class="container">
+  <h2>ADD PROGRESS</h2>
+  <form (submit)="addHabitsProgressRecord()">
+    <div class="col-md-12">
+      <label>Date:</label>
+      <div class="ui-g ui-fluid">
+        <p-calendar
+          name="first"
+          [(ngModel)]="habitsProgressInfo.data"
+          [showIcon]="true"
+          dateFormat="dd.mm.yy"
+          name="first"
+        ></p-calendar>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <label>Status:</label>
+      <select
+        required
+        type="text"
+        class="form-control"
+        id="status1"
+        name="first-status"
+        [(ngModel)]="habitsProgressInfo.status"
+      >
+        <option value="completed">Completed</option>
+        <option value="missed">Missed</option>
+      </select>
+    </div>
+    <div class="col-md-12">
+      <label>Habits:</label>
+      <select
+        required
+        type="text"
+        class="form-control"
+        id="categoryid"
+        name="first-categoryid"
+        [(ngModel)]="habitsProgressInfo.habitsId"
+      >
+        <option *ngFor="let option of dataHabits" [ngValue]="dataHabits.id">{{
+          dataHabits.name
+        }}</option>
+      </select>
+    </div>
+    <div class="col-md-12">
+      <label>Description:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputSuccess2"
+        name="first-description"
+      />
+    </div>
+    <div class="col-md-12">
+      <button
+        type="sumbit"
+        name="button_add"
+        class="btn btn-info btn-block"
+        (click)="addHabitsProgressRecord()"
+      >
+        <h3>ADD</h3>
+      </button>
+    </div>
+  </form>
+</div>

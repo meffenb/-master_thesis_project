@@ -1,0 +1,62 @@
+<div class="container">
+  <h2>ADD HABITS</h2>
+  <form (submit)="addHabitsRecord()">
+    <div class="col-md-12">
+      <label>Name:</label>
+      <input
+        required
+        type="text"
+        class="form-control"
+        id="ame-input1"
+        name="name-input1"
+        [(ngModel)]="dataHabits.name"
+      />
+    </div>
+    <div class="col-md-12">
+      <label>Description:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputSuccess2"
+        name="description-input1"
+        [(ngModel)]="dataHabits.description"
+      />
+    </div>
+    <div class="col-md-12">
+      <label>Category:</label>
+      <select
+        required
+        type="text"
+        class="form-control"
+        id="categoryid"
+        name="categoryid"
+        [(ngModel)]="dataHabits.habitsCategoriesId"
+      >
+        <option *ngFor="let option of options2" [ngValue]="option.id">{{
+          option.name
+        }}</option>
+      </select>
+    </div>
+    <div class="col-md-12">
+      <label>Choose start date:</label>
+      <div class="ui-g ui-fluid">
+        <p-calendar
+          name="first"
+          [(ngModel)]="dataHabits.startDate"
+          [showIcon]="true"
+          dateFormat="dd.mm.yy"
+        ></p-calendar>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <button
+        type="submit"
+        name="button_add"
+        class="btn btn-info btn-block"
+        (click)="addHabitsRecord()"
+      >
+        <h3>ADD</h3>
+      </button>
+    </div>
+  </form>
+</div>
